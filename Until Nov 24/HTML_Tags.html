@@ -1,0 +1,773 @@
+<!--Docutype tag -->
+<!DOCTYPE html>
+
+<!--<html> tag-->
+<html>
+
+<!--<head> tag-->
+
+<head>
+    <!--<title> tag-->
+    <title>Title of the document</title>
+
+    <!--<meta> tag-->
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Tags">
+    <meta name="keywords" content="HTML,CSS, Tags">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link> tag-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--<style> tag-->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .myDiv {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    The content of the document......
+
+    <!--<a> tag-->
+    <h1>The a element</h1>
+    <a href="https://www.google.com">Visit Google.com!</a>
+
+    <!--<abbr> tag-->
+    <h1>The abbr element</h1>
+    <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for creating Web pages</p>
+
+    <!--<acronym> tag not supported in HTML5 -->
+
+    <!--<address> tag-->
+    <h1>The address element</h1>
+
+    <address>
+        Written by <a href="mailto:amutha.novastrid@gmail.com">Amutha</a>.<br>
+        Visit us at:<br>
+        VOC street,<br>
+        Anbunagar, Madurai<br>
+        Tamilnadu
+    </address>
+
+    <!--<applet> tag not supported in HTML5 -->
+
+    <!--<area> and <map> tag-->
+    <h1>The map and area elements</h1>
+
+    <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/htmL/phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://www.w3schools.com/htmL/coffee.htm">
+    </map>
+
+    <!--<main> tag-->
+    <h1>The main element</h1>
+    <main>
+        <h1>Most Popular Browsers</h1>
+        <p>Chrome, Firefox, and Edge are the most used browsers today.</p>
+
+        <!--<article> tag-->
+        <h1>The article element</h1>
+
+        <article>
+            <h4>Google Chrome</h4>
+            <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular
+                web
+                browser today!</p>
+        </article>
+
+        <article>
+            <h4>Mozilla Firefox</h4>
+            <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most
+                popular
+                web browser since January, 2018.</p>
+        </article>
+
+        <article>
+            <h4>Microsoft Edge</h4>
+            <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced
+                Internet
+                Explorer.</p>
+        </article>
+    </main>
+
+    <!--<aside> tag-->
+    <h1>The aside element</h1>
+
+    <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a
+        great
+        summer together with my family!</p>
+
+    <aside>
+        <h4>Epcot Center</h4>
+        <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+            pavilions,
+            award-winning fireworks and seasonal special events.</p>
+    </aside>
+
+    <!--<audio> tag-->
+    <h1>The audio element</h1>
+
+    <p>Click on the play button to play a sound:</p>
+
+    <audio controls>
+        <!--<source> tag-->
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!--<b> tag-->
+    <h1>The b element</h1>
+    <p>You can also use the following CSS to set bold text:<b>"font-weight: bold;"</b>.</p>
+
+    <!--<basefont> tag not supported in HTML5 -->
+
+    <!--<bdi> tag-->
+    <h1>The bdi element</h1>
+    <p>In the example below, usernames are shown along with the number of points in a contest. If the bdi element is
+        not
+        supported in the browser, the username of the Arabic user would confuse the text (the bidirectional
+        algorithm
+        would put the colon and the number "90" next to the word "User" rather than next to the word "points").</p>
+
+    <!--<ul> tag-->
+    <ul>
+        <!--<li> tag-->
+        <li>User <bdi>hrefs</bdi>: 60 points</li>
+        <li>User <bdi>jdoe</bdi>: 80 points</li>
+        <li>User <bdi>إيان</bdi>: 90 points</li>
+    </ul>
+
+    <!--<bdo> tag-->
+    <h1>The bdo element</h1>
+
+    <p>NOVASTRID</p>
+    <p><bdo dir="rtl">NOVASTRID</bdo></p>
+
+    <!--<big> tag not supported in HTML5 -->
+
+    <!--<blockquote> tag-->
+    <h1>The blockquote element</h1>
+
+    <p>Here is a quote from w3schools's website:</p>
+
+    <blockquote cite="https://www.w3schools.com/html/computer.htm">
+        Computer:
+        Wikipedia says: A computer is a device that can be instructed to carry out arbitrary sequences of arithmetic
+        or
+        logical
+        operations automatically.
+    </blockquote>
+
+    <!-- The <body> tag defines the document's body -->
+
+    <!--<br> tag-->
+    <h1>The br element</h1>
+    <p>
+        Twinkle, twinkle, little star,<br>How I wonder what you are.<br>Up above the world so high,<br>Like a
+        diamond in
+        the sky.
+    </p>
+
+    <!--<button> tag-->
+    <h1>The button Element</h1>
+
+    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+
+    <!--<canvas> tag-->
+    <h1>The canvas element</h1>
+
+    <canvas id="myCanvas">Your browser does not support the canvas tag.</canvas>
+
+    <!--<script> tag-->
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 80, 100);
+    </script>
+
+    <!--<caption> tag-->
+    <h1>The caption element</h1>
+
+    <!--<table> tag-->
+    <table>
+        <caption>Employee Details</caption>
+        <!--<thead> tag-->
+        <thead>
+            <!--<tr> tag-->
+            <tr>
+                <!--<th> tag-->
+                <th>Emp Name</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <!--<tbody> tag-->
+        <tbody>
+            <tr>
+                <!--<td> tag-->
+                <td>Ajay</td>
+                <td>Team Lead</td>
+            </tr>
+            <tr>
+                <td>Varshika</td>
+                <td>Project Manager</td>
+            </tr>
+        </tbody>
+        <!--<tfoot> tag-->
+        <tfoot>
+            <tr>
+                <td>Poorna</td>
+                <td>Trainee</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!--<center> tag not supported in HTML5 -->
+
+    <!--<cite> tag-->
+    <h1>The cite element</h1>
+
+    <p>“You have to grow from the inside out. None can teach you, none can make you spiritual. There is no other
+        teacher
+        but your own soul." <cite>― Swami Vivekananda</cite></p>
+
+    <!--<code> tag-->
+    <h1>The code element</h1>
+
+    <p>The HTML <code>button</code> tag defines a clickable button.</p>
+
+    <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
+
+    <!--<col> and <colgroup> tags-->
+    <h1>The col element and The colgroup element</h1>
+
+    <table>
+        <colgroup>
+            <col span="2" style="background-color:blue">
+            <col style="background-color:yellow">
+        </colgroup>
+        <tr>
+            <th>code</th>
+            <th>Book name</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>3476896</td>
+            <td>Panchatandra stories</td>
+            <td>$53</td>
+        </tr>
+        <tr>
+            <td>5869207</td>
+            <td>Bedtime stories</td>
+            <td>$49</td>
+        </tr>
+    </table>
+
+    <!--<data> tag-->
+    <h1>The data element</h1>
+
+    <p>The following example displays employee names but also associates each name with a employee ID:</p>
+
+    <ul>
+        <li><data value="21053">Varshika</data></li>
+        <li><data value="21054">Ajay</data></li>
+        <li><data value="21055">Mithun</data></li>
+    </ul>
+
+    <!--<datalist> tag-->
+    <h1>The datalist element</h1>
+
+    <form action="/action_page.php" method="get">
+        <!--<label> tag-->
+        <label for="Fruits">Choose your Favourite from the list:</label>
+        <input list="fruits" name="fruit" id="fruit">
+        <datalist id="fruits">
+            <option value="Apple">
+            <option value="Banana">
+            <option value="Kiwi">
+            <option value="Strawberry">
+            <option value="Pineapple">
+        </datalist>
+        <input type="submit">
+    </form>
+
+    <!--<strong> tag-->
+    <p><strong>Note:</strong> The datalist tag is not supported in Safari 12.0 (or earlier).</p>
+
+    <!--<dd>,<dt>,<dl> tags-->
+    <h1>The dl, dd, and dt elements</h1>
+
+    <p>These three elements are used to create a description list:</p>
+
+    <dl>
+        <dt>Peacock</dt>
+        <dd>It is our National Bird.</dd>
+        <dt>Tiger</dt>
+        <dd>It is our National Animal.</dd>
+    </dl>
+
+    <!--<del> and <ins> tags-->
+    <h1>The del and ins element</h1>
+
+    <p>My favorite dress is <del>chudi</del> <ins>saree</ins>!</p>
+
+    <!--<details> and <summary> tags -->
+    <h1>The details and summary element</h1>
+
+    <details>
+        <summary>Wonderla</summary>
+        <p>Wonderla is the of the largest chains of amusement parks in India. It is owned and operated by Wonderla
+            Holidays Limited which is headquartered near Bidadi, 28 kilometres from Bengaluru, Karnataka.</p>
+    </details>
+
+    <!--<dfn> tag-->
+    <h1>The dfn element</h1>
+
+    <p><dfn>Web development</dfn> is the work involved in developing a Web site for the Internet (World Wide Web) or
+        an
+        intranet (a private network). Web development can range from developing a simple single static page of plain
+        text to complex web applications, electronic businesses, and social network services. </p>
+
+    <!--<dialog> tag-->
+    <h1>The dialog element</h1>
+
+    <p>Listening songs</p>
+
+    <p>Handmade Crafts</p>
+
+    <dialog open>These are a few of my favorite things</dialog>
+
+    <p>Playing with my son</p>
+
+    <p>Cooking</p>
+
+    <p><b>Note:</b> The dialog tag is not supported in Safari and Edge (prior version 79).</p>
+
+    <!--<dir> tag not supported in HTML5-->
+
+    <!--<div> tag-->
+    <h1>The div element</h1>
+
+    <div class="myDiv">
+        <h2>Angular</h2>
+        <p>Angular is an application design framework and development platform for creating efficient and
+            sophisticated
+            single-page apps.</p>
+    </div>
+
+    <p>Before you study AngularJS, you should have a basic understanding of: HTML, CSS, Typescript</p>
+
+    <!--<em> tag-->
+    <h1>The em element</h1>
+
+    <p>I <em>love</em> my son!!!</p>
+
+    <p>We <em>play</em> cricket`.</p>
+
+    <!--<embed> tag = Most browsers no longer support-->
+    <h1>The embed element</h1>
+
+    <embed type="image/jpg" src="rose.jpg" width="300" height="200">
+
+    <!--<fieldset> and <form> tags-->
+    <h1>The fieldset element</h1>
+
+    <form action="/action_page.php">
+        <fieldset>
+            <!--<legend> tag-->
+            <legend>Personal Details:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <!--<input> tag-->
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <!--<figure> and <figcaption> tags-->
+    <h1>The figure and figcaption element</h1>
+    <figure>
+    <!--<img> tag-->
+    <img src="rose.jpg" alt="Rose" style="width:100%">
+    <figcaption>Fig.1 - Red Rose with Rain Drops</figcaption>
+    </figure>
+
+    <!--<font> tag not supported in HTML5-->
+
+    <!--<footer> tag-->
+    <footer style="text-align: right">
+        <p>Author: Swami Vivekananda<br>
+            <a href="mailto:smvi@example.com">smvi@example.com</a>
+        </p>
+    </footer>
+
+    <!--<frame> tag not supported in HTML5-->
+
+    <!--<frameset> tag not supported in HTML5-->
+
+    <!--<h1>-<h6> tags-->
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+    <h4>This is heading 4</h4>
+    <h5>This is heading 5</h5>
+    <h6>This is heading 6</h6>
+
+    <p><b>Tip:</b> Use h1 to h6 elements only for headings. Do not use them just to make text bold or big. Use other
+        tags for that.</p>
+
+    <!--<header> tag-->
+    <article>
+        <header>
+              <h4>Google Chrome</h4>
+            <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most
+                popular
+                web browser today!</p>
+            <p>Developed by Google</p>
+            <p>Some additional information here</p>
+        </header>
+        <!--<i> tag-->
+        <p><i>Lorem ipsum</i> is the most popular filler text in history.</p>
+    </article>
+
+    <!--<hr> tag-->
+    <hr>
+
+    <!--<iframe> tag-->
+    <h1>The iframe element</h1>
+
+    <iframe src="https://www.google.com/" title="Google Search">
+    </iframe>
+
+    <!--<kbd> tag-->
+    <h1>The kbd element</h1>
+
+    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+
+    <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+
+    <!--<mark> tag -->
+    <h1>The mark element</h1>
+
+    <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+    <!--<meter> tag-->
+    <h1>The meter element</h1>
+
+    <p>The meter element is used to display a gauge:</p>
+
+    <label for="disk_c">Disk usage C:</label>
+    <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+
+    <label for="disk_d">Disk usage D:</label>
+    <meter id="disk_d" value="0.6">60%</meter>
+
+    <p><strong>Note:</strong> The meter tag is not supported in Edge 12 (or earlier).</p>
+
+    <!--<nav> tag-->
+    <h1>The nav element</h1>
+
+    <p>The nav element defines a set of navigation links:</p>
+
+    <nav>
+        <a href="/html/">HTML</a> |
+        <a href="/css/">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/python/">Python</a>
+    </nav>
+
+    <!--<noframe> tag not supported in HTML5-->
+    <!--<noscript> tag-->
+    <h1>The noscript element</h1>
+
+    <p>A browser with JavaScript disabled will show the text inside the noscript element ("Hello World!" will not be
+        displayed).</p>
+
+    <script>
+        document.write("Hello World!")
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+    <!--<object> tag-->
+    <h1>The object element</h1>
+
+    <object data="rose.jpg" width="300" height="200"></object>
+
+    <!--<ol> tag-->
+    <h1>The ol element</h1>
+
+    <ol>
+        <li>East</li>
+        <li>West</li>
+        <li>North</li>
+        <li>South</li>
+    </ol>
+
+    <!--<optgroup> tag-->
+    <h1>The optgroup element</h1>
+
+    <p>The optgroup tag is used to group related options in a drop-down list:</p>
+
+    <form action="/action_page.php">
+        <label for="vegetables">Choose a Vegetable:</label>
+        <!--<select> tag-->
+        <select name="vegetables" id="vegetables">
+            <optgroup label="Potato">
+                <!--<option> tag-->
+                <option value="babypotato">Baby Potato</option>
+                <option value="sweetpotato">Sweet Potato</option>
+            </optgroup>
+            <optgroup label="Beans">
+                <option value="soyabeans">Soya Beans</option>
+                <option value="butterbeans">Butter Beans</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--<output> tag-->
+    <h1>The output element</h1>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+    </form>
+
+    <!--<p> tag-->
+    <p><strong>Note:</strong> The output element is not supported in Edge 12 (or earlier).</p>
+
+    <!--<param> tag-->
+    <h1>The param element</h1>
+
+    <object data="horse.wav">
+        <param name="autoplay" value="true">
+    </object>
+
+    <!--<picture> tag-->
+    <h1>The picture element</h1>
+
+    <p>Resize the browser window to load different images.</p>
+
+    <picture>
+        <source media="(min-width:650px)" srcset="blue-rose.jpg">
+        <source media="(min-width:465px)" srcset="green-rose.jpg">
+        <img src="Novastrid/orange-rose.jpg" alt="Flowers" style="width:auto;">
+    </picture>
+
+    <!--<pre> tag-->
+    <h1>The pre element</h1>
+
+    <pre>
+    Baa, baa, black sheep,
+    Have you any wool?
+    Yes sir, yes sir,
+    
+    Three bags full.
+    
+    One for my master,
+    
+    and One for my dame,
+    one for the little boy
+    Who lives down the lane.
+</pre>
+
+    <!--<progress> tag-->
+    <h1>The progress element</h1>
+
+    <label for="file">Downloading progress:</label>
+    <progress id="file" value="32" max="100"> 32% </progress>
+
+    <!--<q> tag-->
+    <h1>The q element</h1>
+
+    <p>Swami Vivekananda:
+        <q>In a conflict between the heart and the brain, follow your heart.</q>
+    </p>
+
+    <!--<rp>, <rt>, <ruby> tags-->
+    <h1>The rp element</h1>
+
+    <ruby>
+        漢 <rp>(</rp>
+        <rt>ㄏㄢˋ</rt>
+        <rp>)</rp>
+    </ruby>
+
+    <!--<s> tag-->
+    <h1>The s element</h1>
+
+    <p><s>Only 50 tickets left!</s></p>
+    <p>SOLD OUT!</p>
+
+    <!--<samp> tag-->
+    <h1>The samp element</h1>
+
+    <p>Message from my computer:</p>
+
+    <p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+    <!--<section> tag-->
+    <h1>The section element</h1>
+
+    <section>
+        <h2>View HTML Source Code:</h2>
+        <p>Right-click in an HTML page and select "View Page Source" (in Chrome) or "View Source" (in Edge), or similar
+            in other browsers. This will open a window containing the HTML source code of the page.
+        </p>
+    </section>
+
+    <section>
+        <h2>Inspect an HTML Element:</h2>
+        <p>Right-click on an element (or a blank area), and choose "Inspect" or "Inspect Element" to see what elements
+            are made up of (you will see both the HTML and the CSS). You can also edit the HTML or CSS on-the-fly in the
+            Elements or Styles panel that opens. </p>
+    </section>
+
+    <!--<small> tag-->
+    <h1>The small element</h1>
+
+    <p>This is some normal text.</p>
+    <p><small>This is some smaller text.</small></p>
+
+    <!--<span> tag-->
+    <h1>The span element</h1>
+
+    <p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span
+            style="color:blueviolet;font-weight:bold">blueviolet</span> eyes.</p>
+
+    <!--<strike> not supported in HTML5-->
+
+    <!--<sub> and <sup> tags-->
+    <h1>The sub and sup elements</h1>
+
+    <p>This text contains <sub>subscript</sub> text.</p>
+    <p>This text contains <sup>superscript</sup> text.</p>
+
+    <!--<svg> tag-->
+    <h1>The svg element</h1>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <!--<template> tag-->
+    <h1>The template Element</h1>
+
+    <p>Click the button below to display the hidden content from the template element.</p>
+
+    <button onclick="showContent()">Show hidden content</button>
+
+    <template>
+        <h2>Flower</h2>
+        <img src="blue-rose.jpg" width="214" height="204">
+    </template>
+
+    <script>
+        function showContent() {
+            var temp = document.getElementsByTagName("template")[0];
+            var clon = temp.content.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+    </script>
+
+    <!--<textarea> tag-->
+    <h1>The textarea element</h1>
+
+    <form action="/action_page.php">
+        <label for="w3review">Review of W3Schools:</label>
+        <textarea id="w3review" name="w3review" rows="4" cols="50">
+  At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+  </textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Click the "Submit" button and the form-data will be sent to a page on the
+        server called "action_page.php".</p>
+
+    <!--<time> tag-->
+    <h1>The time element</h1>
+
+    <p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+
+    <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+    <p><b>Note:</b> The time element does not render as anything special in any of the major browsers.</p>
+
+    <!--<tt> tag not supported in HTML5-->
+
+    <!--<u> tag-->
+    <h1>The u element</h1>
+
+    <p>This is some <u>mispeled</u> text.</p>
+
+    <!--<var> tag-->
+    <h1>The var element</h1>
+
+    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is
+        the vertical height.</p>
+
+    <!--<video> tag-->
+    <h1>The video element</h1>
+
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <!--<wbr> tag-->
+    <h1>The wbr element</h1>
+
+    <p>Try to shrink the browser window, to view how the very long word in
+        the paragraph below will break:</p>
+
+    <p>This is a
+        veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.
+    </p>
+
+    <p><b>Note:</b> The wbr element is not supported in Internet Explorer 11 (or earlier).</p>
+
+    <!--<base> tag-->
+    <base href="https://www.w3schools.com/" target="_blank">
+
+    <h1>The base element</h1>
+
+    <p><img src="images/stickman.gif" width="24" height="39" alt="Stickman"> - Notice that we have only specified a
+        relative address for the image. Since we have specified a base URL in the head section, the browser will
+        look
+        for the image at "https://www.w3schools.com/images/stickman.gif".</p>
+
+    <p><a href="tags/tag_base.asp">HTML base tag</a> - Notice that the link opens in a new window, even if it has no
+        target="_blank" attribute. This is because the target attribute of the base element is set to "_blank".</p>
+
+
+</body>
+
+
+</html>
