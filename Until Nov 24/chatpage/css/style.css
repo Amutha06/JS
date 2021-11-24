@@ -1,0 +1,66 @@
+body{
+    background-color: lightgray;
+}
+
+.container{
+    background-color: #fff;
+}
+
+p > img{
+    width: 20px;
+    height: 20px;
+}
+
+span{
+    color: darkgray;
+}
+
+.flex-container {
+    display: flex;
+}
+  
+.flex-container > div {
+    background-color: #a5cac7;
+    margin: 10px;
+    padding: 2px;
+    font-size: 30px;
+}
+
+.flex-container > div > img {
+    width: 70px;
+    height: 70px;
+}
+
+.card-body > p > img{
+    width: 35px;
+    height: 35px;
+}
+
+.fa-bookmark, .fa-star, .fa-star-o{
+    color: darkorange;
+}
+
+.fa-paperclip{
+    color: darkslategrey;
+}
+
+time{
+    color: dimgrey;
+    float: right;
+}
+
+select{
+    background-color: lightgray;   
+}
+
+.nav-link{
+    color: black;
+}
+
+a > img{
+    width: 35px;
+}
+
+figcaption{
+    font-size: small;
+}

@@ -1,0 +1,38 @@
+.container-fluid{
+    text-align:center;
+    background-color: lightgrey; 
+    line-height: 70px;
+    height: 70px;
+   }
+    
+   .w-100{
+       text-align: center;
+       background-color: lightgrey;
+       line-height: 200px;
+   }
+    
+
+.d-flex{
+         line-height: 40px;
+         text-align: center;
+     }
+
+.m-2{
+         background-color: lightgrey;
+     }
+
+.flex-column{
+         width: 50%;
+         line-height: 200PX;
+    }
+.container-fluid4 > div {
+         background-color: lightgrey;
+         float: left;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         width: 49%;
+         line-height: 420px;
+         margin: 5px;
+     }  
+

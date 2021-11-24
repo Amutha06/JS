@@ -1,0 +1,35 @@
+body
+{
+margin-top: 42%;
+justify-content:center;
+background: url(Back.jpg);
+background-position:center;
+background-repeat: no-repeat;
+}
+
+.first-txt {
+    position: absolute;
+    top: 28%;
+    left: 36%;
+    color: red;
+    font-family: 'Brush Script Std';
+    font-weight: bold;
+}
+
+.second-txt {
+    position: absolute;
+    bottom: 50%;
+    left: 45%;
+    color: blue;
+    font-family: 'Vivaldi';
+    font-weight: bold;
+}
+
+.image{
+    position: absolute;
+    width: 120px;
+    left: 46%;
+    bottom: 26%;
+}
+
+

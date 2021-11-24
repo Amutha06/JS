@@ -1,0 +1,45 @@
+body
+{
+margin-top: 40%;
+justify-content:center;
+background: url(Back.jpg);
+background-position:center;
+background-repeat: no-repeat;
+background-size: 700px 500px;
+}
+
+.first-txt {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    color: red;
+    font-family: 'Brush Script Std';
+    font-weight: bold;
+}
+
+.second-txt {
+    position: absolute;
+    bottom: 63%;
+    left: 50%;
+    color: blue;
+    font-family: 'Vivaldi';
+    font-weight: bold;
+}
+
+.third-txt{
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.image{
+    position: absolute;
+    width: 130px;
+    left: 63%;
+    bottom: 25%;
+}
+
+

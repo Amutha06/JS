@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Bootstrap Example</title>
+    <link rel="icon" type="image/x-png" href="/image/chat.png">
+</head>
+
+<body>
+    <!--Full page started-->
+    <div class="row">
+        <div class="col-2 m-5">
+            <div class="container">
+                <br>
+                <button type="button" class="btn-lg btn-primary w-100">+ Compose<br>Mail</button>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Folders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: rgb(42, 190, 248);"> <i class="fa fa-envelope"></i>
+                            Inbox &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <i class="fa fa-clone"></i> Drafts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <i class="fa fa-send-o"></i> Sent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <i class="fa fa-exclamation-circle"></i> Spam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <i class="fa fa-trash-o"></i> Trash</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <i class="fa fa-star-half-o"></i> Starred</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#"><b>Contacts &nbsp; 10 &nbsp; &nbsp; <i
+                                    class="fa fa-ellipsis-v"></i></b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="image/img1.jpg" class="rounded-circle">
+                            <figcaption>Poul Smith<br>Founder @Maxx</figcaption>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <img src="image/img2.jpg" class="rounded-circle">
+                            <figcaption>John Wick<br>CTO @Lax</figcaption>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <img src="image/img3.jpg" class="rounded-circle">
+                            <figcaption>Susan Don<br>CEO @Don Co.</figcaption>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <img src="image/img4.jpg" class="rounded-circle">
+                            <figcaption>Sam Doe<br>Tech Lead @Poll</figcaption>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <img src="image/img1.jpg" class="rounded-circle">
+                            <figcaption>John Smith<br>Founder @ Dove</figcaption>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Card content-->
+        <div class="col-3">
+
+            <select action="options" class="m-3 border-0">
+                <option value="recent">Recent</option>
+                <option value="inbox">Inbox</option>
+                <option value="sent">Sent</option>
+                <option value="draft">Draft</option>
+            </select>
+
+            <div class="card">
+                <div class="card-body">
+                    <p> <img src="image/img1.jpg" class="rounded-circle"> Pepper Potts</p>
+                    <p> Food App IOS & Android - Need<br>confirmation to start project<br>execution</p>
+                    <p>
+                        <i class="fa fa-bookmark"></i> &nbsp;
+                        <i class="fa fa-star-o"></i> &nbsp;
+                        <i class="fa fa-paperclip"></i>
+                        <time>11:50AM</time>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="border-color:rgb(42, 190, 248);">
+                <div class="card-body">
+                    <p> <img src="image/img2.jpg" class="rounded-circle"> Poul Smith</p>
+                    <p>Prepare Mockup as per the spec<br>document and Submit by Monday!!!</p>
+                    <p>
+                        <i class="fa fa-bookmark"></i> &nbsp;
+                        <i class="fa fa-star"></i> &nbsp;
+                        <i class="fa fa-paperclip"></i>
+                        <time>11:50AM</time>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <p> <img src="image/img3.jpg" class="rounded-circle"> Edwin Jarvis</p>
+                    <p>FixBazzar - Assign developer to<br>develop project</p>
+                    <p>
+                        <i class="fa fa-bookmark"></i> &nbsp;
+                        <i class="fa fa-star-o"></i> &nbsp;
+                        <i class="fa fa-paperclip"></i>
+                        <time>11:50AM</time>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <p> <img src="image/img4.jpg" class="rounded-circle"> Edwin Jarvis</p>
+                    <p>Maxximo App - Request approved to <br>deploy on server</p>
+                    <p>
+                        <i class="fa fa-bookmark"></i> &nbsp;
+                        <i class="fa fa-star"></i> &nbsp;
+                        <i class="fa fa-paperclip"></i>
+                        <time>11:50AM</time>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <p> <img src="image/img1.jpg" class="rounded-circle"> Jim Ward</p>
+                    <p> Invitation to join tech team meeting</p>
+                    <p>
+                        <i class="fa fa-bookmark"></i> &nbsp;
+                        <i class="fa fa-star"></i> &nbsp;
+                        <i class="fa fa-paperclip"></i>
+                        <time>11:50AM</time>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <p> <img src="image/img2.jpg" class="rounded-circle"> Jane Doe</p>
+                    <p> DexLoop - Progress report</p>
+                    <p>
+                        <i class="fa fa-bookmark"></i> &nbsp;
+                        <i class="fa fa-star-o"></i> &nbsp;
+                        <i class="fa fa-paperclip"></i>
+                        <time>11:50AM</time>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Page content-->
+        <div class="col-6">
+            <div class="container">
+                <p>Dec 1, 2019 12:02 PM</p>
+                <h3>Prepare Mockup as per the spec document and <br>Submit by Monday!!!</h3>
+                <p><b>From:</b> Paul Smith &lt;paul.smith@domain.com&gt;</p><br>
+                <p>Hi Jacob,</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci non laborum sequi cumque minima,
+                    cupiditate tempora, corrupti velit libero mollitia, fugiat quidem? Reiciendis pariatur quam modi
+                    laboriosam ipsam reprehenderit aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Non
+                    esse odio id porro! Et aliquid sit, aperiam consequuntur vero culpa incidunt magni, error esse ea ab
+                    repudiandae minima molestias qui.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus inventore impedit cupiditate error,
+                    omnis, doloremque blanditiis aperiam alias tempora totam placeat ratione neque illo reiciendis!
+                    Aperiam
+                    distinctio culpa rerum esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                    repellendus
+                    minus molestias, iure facilis eos vitae ipsam natus, nostrum perspiciatis laboriosam qui! Quis optio
+                    labore veniam, architecto nemo mollitia sapiente.</p><br>
+                <p>Thanks & Regards</p>
+                <p>Julian Cruise</p>
+                <p>
+                    <img src="image/attach.png">
+                    <span>Attachment (90MB)</span>
+                    <button type="button" class="btn">View All</button>
+                    <button type="button" class="btn">Download All</button>
+                </p>
+                <div class="flex-container">
+                    <div><img src="image/img1.jpg"></div>
+                    <div><img src="image/img2.jpg"></div>
+                    <div><img src="image/img3.jpg"></div>
+                    <div><img src="image/img4.jpg"></div>
+                    <div>&nbsp 30+ &nbsp</div>
+                </div>
+                <br>
+                <button type="button" class="btn">Reply</button>
+                <button type="button" class="btn btn-primary">Forward</button>
+                <br>.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    
+</body>
+</html>

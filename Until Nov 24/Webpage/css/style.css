@@ -1,0 +1,12 @@
+.webcontent{
+    text-align: center;
+}
+.nav-link, .navbar-brand{
+    color: black;
+}
+.row{
+    padding: 30px;
+}
+ul{
+    list-style-type: none;
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>JavaScript Task</title>
+    <link rel="icon" type="image/x-jpg" href="image/js.jpg">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h4>String Length of my name: Amutha</h4>
+    <p id="demo1"></p>
+
+    <script>
+        let text = "Amutha";
+        document.getElementById("demo1").innerHTML = text.length;
+    </script>
+
+    <h4>Paragraph slice</h4>
+    <p id="demo2"></p>
+
+    <script>
+    var str="JavaScript is the world's most popular programming language. JavaScript is the programming language of the Web. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced."
+    var result = str.slice  (0, 71);
+    document.getElementById("demo2").innerHTML = result;
+    </script>
+
+</body>
+
+</html>
