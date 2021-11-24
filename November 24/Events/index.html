@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>HTML Events</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        h3 {
+            color: blueviolet;
+        }
+
+        .droptarget {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+
+        #myDIV1 {
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+        <h3>onfocus and onblur</h3>
+        <p>When you enter the input field, a function is triggered which sets the background color to yellow. When you
+            leave the input field, a function is triggered which sets the background color to red.</p>
+
+        Enter your name: <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+
+        <script>
+            // Focus = Changes the background color of input to yellow
+            function focusFunction() {
+                document.getElementById("myInput").style.background = "yellow";
+            }
+
+            // No focus = Changes the background color of input to red
+            function blurFunction() {
+                document.getElementById("myInput").style.background = "red";
+            }
+        </script>
+
+        <h3>onchange</h3>
+        <p>Select a new car from the list.</p>
+
+        <select id="mySelect" onchange="myFunction()">
+            <option value="Audi">Audi
+            <option value="BMW">BMW
+            <option value="Mercedes">Mercedes
+            <option value="Volvo">Volvo
+        </select>
+
+        <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("mySelect").value;
+                document.getElementById("demo").innerHTML = "You selected: " + x;
+            }
+        </script>
+        <h3>Onsubmit</h3>
+
+        <p>When you submit the form, a function is triggered which alerts some text.</p>
+
+        <form action="/action_page.php" onsubmit="myFunction()">
+            Enter name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
+
+        <script>
+            function myFunction() {
+                alert("The form was submitted");
+            }
+        </script>
+        <h3>onselect</h3>
+        Some text: <input type="text" value="Select me!!" onselect="myFunction()">
+
+        <p>The function myFunction() is triggered when some text is selected in the input field. The function shows a
+            message.</p>
+
+        <script>
+            function myFunction() {
+                alert("You have selected some text!");
+            }
+        </script>
+        <h3>onsearch</h3>
+        <p>Write something in the search field and press "ENTER".</p>
+
+        <input type="search" id="myInput1" onsearch="myFunction1()">
+
+        <p><strong>Note:</strong> The onsearch event is not supported in Internet Explorer, Firefox or Opera 12 and
+            earlier versions.</p>
+
+        <p id="demo1"></p>
+
+        <script>
+            function myFunction1() {
+                var y = document.getElementById("myInput1");
+                document.getElementById("demo1").innerHTML = "You are searching for: " + y.value;
+            }
+        </script>
+        <h3>onreset</h3>
+        <p>When you reset the form, a function is triggered which alerts some text.</p>
+
+        <form onreset="myFunction()">
+            Enter name: <input type="text">
+            <input type="reset">
+        </form>
+
+        <script>
+            function myFunction() {
+                alert("The form was reset");
+            }
+        </script>
+        <h3>onkeydown and onkeyup</h3>
+        <p>Press and hold down a key inside the text field to set a red background color. Release the key to set a green
+            background color.</p>
+
+        <input type="text" id="demo2" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+
+        <script>
+            function keydownFunction() {
+                document.getElementById("demo2").style.backgroundColor = "red";
+            }
+
+            function keyupFunction() {
+                document.getElementById("demo2").style.backgroundColor = "green";
+            }
+        </script>
+        <h3>onkeypress</h3>
+        <p>A function is triggered when the user is pressing a key in the input field.</p>
+
+        <input type="text" onkeypress="myFunction()">
+
+        <script>
+            function myFunction() {
+                alert("You pressed a key inside the input field");
+            }
+        </script>
+        <h3>onclick and ondblclick</h3>
+        <button ondblclick="myFunction1()">Double-click me</button>
+        <button onclick="myFunction2()">Click me</button>
+
+        <p id="demo3"></p>
+
+
+        <script>
+            function myFunction1() {
+                document.getElementById("demo3").innerHTML = "Hello World";
+            }
+            function myFunction2() {
+                document.getElementById("demo3").innerHTML = "Hai World";
+            }
+        </script>
+        <h3>onmousedown and onmouseup</h3>
+        <p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">
+            Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this
+            paragraph. The function sets the color of the text to red. The mouseUp() function is triggered when the
+            mouse button is released. The mouseUp() function sets the color of the text to green.
+        </p>
+
+        <script>
+            function mouseDown() {
+                document.getElementById("p1").style.color = "red";
+            }
+
+            function mouseUp() {
+                document.getElementById("p1").style.color = "green";
+            }
+        </script>
+        <h3>onmouseover and onmouseout</h3>
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="image/smiley.png" alt="Smiley"
+            width="32" height="32">
+
+        <p>The function bigImg() is triggered when the user mouse over the image. This function enlarges the image.</p>
+        <p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That function sets
+            the height and width of the image back to normal.</p>
+
+        <script>
+            function bigImg(z) {
+                z.style.height = "64px";
+                z.style.width = "70px";
+            }
+
+            function normalImg(z) {
+                z.style.height = "32px";
+                z.style.width = "35px";
+            }
+        </script>
+        <h3>onwheel</h3>
+        <div id="myDIV" onwheel="myFunction()">This example demonstrates how to assign an "onwheel" event event to a DIV
+            element. Roll the mouse wheel over me - either up or down!</div>
+
+        <p>A function is triggered when you roll the mouse wheel over div. The function sets the font-size of div to 35
+            pixels.</p>
+
+        <p><strong>Note:</strong> The onwheel event is not supported in Internet Explorer or Safari.</p>
+
+        <script>
+            function myFunction() {
+                document.getElementById("myDIV").style.fontSize = "35px";
+            }
+        </script>
+        <h3>ondrag, ondragover, ondragstart, and ondrop</h3>
+        <p>Drag the p element back and forth between the two rectangles:</p>
+
+        <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag me!</p>
+        </div>
+
+        <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        <p style="clear:both;" id="demo4"></p>
+
+        <script>
+            function dragStart(event) {
+                event.dataTransfer.setData("Text", event.target.id);
+            }
+
+            function dragging(event) {
+                document.getElementById("demo4").innerHTML = "The p element is being dragged";
+            }
+
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+
+            function drop(event) {
+                event.preventDefault();
+                var data = event.dataTransfer.getData("Text");
+                event.target.appendChild(document.getElementById(data));
+                document.getElementById("demo4").innerHTML = "The p element was dropped";
+            }
+        </script>
+
+        <h3>onscroll</h3>
+        <p>Try the scrollbar in div.</p>
+
+        <div id="myDIV1" onscroll="myFunction3()">In my younger and more vulnerable years my father gave me some advice
+            that I've been turning over in my mind ever since.
+            <br><br>
+            'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world
+            haven't had the advantages that you've had.'
+        </div>
+
+        <script>
+            function myFunction3() {
+                document.getElementById("myDIV1").style.color = "red";
+            }
+        </script>
+
+        <p>A function is triggered when you scroll in div. The function sets the color of the text in div to red.</p>
+
+        <h3>oncopy,oncut,onpaste</h3>
+        <input type="text" oncopy="myFunction4()" value="Try to copy this text">
+        <input type="text" oncut="myFunction5()" value="Try to cut this text">
+        <input type="text" onpaste="myFunction6()" value="Try to paste something in here" size="40">
+
+        <p id="demo5"></p>
+
+        <script>
+            function myFunction4() {
+                document.getElementById("demo5").innerHTML = "You copied text!"
+            }
+            function myFunction5() {
+                document.getElementById("demo5").innerHTML = "You cut text!";
+            }
+            function myFunction6() {
+                document.getElementById("demo5").innerHTML = "You pasted text!";
+            }
+        </script>
+    </body>
+
+</html>

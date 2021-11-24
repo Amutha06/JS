@@ -1,0 +1,110 @@
+<!doctype html>
+<!--lang attribute-->
+<html lang="en">
+
+<head>
+
+    <title>Missed HTML tags</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--Figure and Figcaption tags-->
+    <h1>The figure and figcaption element</h1>
+    <figure>
+        <!--src, alt attribute-->
+        <img src="image/rose.jpg" alt="Rose" style="width:15%">
+        <figcaption>Fig.1 - Rose, Bangalore, Karnataka.</figcaption>
+    </figure>
+
+    <!--Embed tag-->
+    <h1>The embed element</h1>
+    <!--width and height attribute-->
+    <embed type="image/jpg" src="image/tulip.jpg" width="300" height="200">
+
+    <!--Area tag-->
+
+    <h1>The map and area elements</h1>
+
+    <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+    <img src="image/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/htmL/phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://www.w3schools.com/HTML/coffee.htm">
+    </map>
+
+    <!--iframe tag-->
+
+    <h1>The iframe element</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OuUqS8Po5ps" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> </iframe>
+
+    <!--object tag-->
+    <h1>The object element</h1>
+
+    <object data="image/hibi.jpg" width="300" height="200"></object>
+
+    <!--param tag-->
+    <h1>The param element</h1>
+
+    <object data="image/horse.wav">
+        <param name="autoplay" value="true">
+    </object>
+
+    <!--template tag-->
+
+    
+<h1>The template Element</h1>
+
+<p>Click the button below to display the hidden content from the template element.</p>
+
+<button onclick="showContent()">Show hidden content</button>
+
+<template>
+  <h2>Flower</h2>
+  <img src="image/jasmine.jpg" width="214" height="204">
+</template>
+
+<script>
+function showContent() {
+  var temp = document.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+
+<br><br>
+<!--title attribute-->
+<h2 title="I'm a header">The title Attribute</h2>
+
+<!--style attribute-->
+<p style="color:red;">This is a red paragraph.</p>
+
+</body>
+
+</html>

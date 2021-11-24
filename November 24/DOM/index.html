@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>JS HTML DOM</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+
+        #myDIV1 {
+            background-color: coral;
+            border: 1px solid;
+            padding: 50px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="checkCookies()">
+
+    <h3>Finding HTML element by ID</h3>
+
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello World!";
+    </script>
+    <!--In the example above, getElementById is a method, while innerHTML is a property.-->
+
+    <h3>Finding HTML Elements by Tag Name.</h3>
+
+    <p id="demo1"></p>
+
+    <script>
+        const element = document.getElementsByTagName("p");
+
+        document.getElementById("demo1").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+    </script>
+
+    <h3>Finding HTML Elements by Class Name.</h3>
+    <p class="intro">Hello World!</p>
+    <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        const x = document.getElementsByClassName("intro");
+        document.getElementById("demo2").innerHTML =
+            'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+    </script>
+    <h3>Finding HTML Elements by Query Selectors</h3>
+
+    <p class="intro">Hello World!.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        const y = document.querySelectorAll("p.intro");
+        document.getElementById("demo3").innerHTML =
+            'The first paragraph (index 0) with class="intro" is: ' + y[0].innerHTML;
+    </script>
+    <h3>Finding HTML Elements Using document.forms.</h3>
+
+    <form id="frm1" action="/action_page.php">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>These are the values of each element in the form:</p>
+
+    <p id="demo4"></p>
+
+    <script>
+        const z = document.forms["frm1"];
+        let text = "";
+        for (let i = 0; i < z.length; i++) {
+            text += z.elements[i].value + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text;
+    </script>
+
+    <h3>Dynamic HTML element</h3>
+    <p id="demo5"></p>
+
+    <script>
+        document.getElementById("demo5").innerHTML = "Date : " + Date();
+    </script>
+
+    <h3>document.write()</h3>
+
+    <script>
+        document.write(Date());
+    </script>
+
+    <h3>Form Validation</h3>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>can validate Numeric values</h2>
+
+    <p>Please input a number between 1 and 10:</p>
+
+    <input id="numb">
+
+    <button type="button" onclick="myFunction1()">Submit</button>
+
+    <p id="demo6"></p>
+
+    <script>
+        function myFunction1() {
+            let a = document.getElementById("numb").value;
+            let text1;
+            if (isNaN(a) || a < 1 || a > 100) {
+                text1 = "Input not valid";
+            } else {
+                text1 = "Input OK";
+            }
+            document.getElementById("demo6").innerHTML = text1;
+        }
+    </script>
+
+    <h3>Automatic form validation</h3>
+    <form action="/action_page.php" method="post">
+        <input type="text" name="fname" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h5 id="id1">JavaScript HTML DOM - Changing CSS</h5>
+
+    <button type="button" onclick="document.getElementById('id1').style.color = 'red'">
+        Click Me!</button>
+
+    <h3>DOM Animations</h3>
+
+    <p><button onclick="myMove()">Click Me</button></p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+
+    <h3>JavaScript DOM HTML Events</h3>
+    <p>Click the button to display the date.</p>
+
+    <button onclick="displayDate()">The time is?</button>
+
+    <script>
+        function displayDate() {
+            document.getElementById("demo7").innerHTML = Date();
+        }
+    </script>
+
+    <p id="demo7"></p>
+
+    <h3>onload</h3>
+    <p id="demo8"></p>
+
+    <script>
+        function checkCookies() {
+            var text2 = "";
+            if (navigator.cookieEnabled == true) {
+                text2 = "Cookies are enabled.";
+            } else {
+                text2 = "Cookies are not enabled.";
+            }
+            document.getElementById("demo8").innerHTML = text2;
+        }
+    </script>
+
+    <h3>onchange</h3>
+    Enter your name: <input type="text" id="fname" onchange="upperCase()">
+    <script>
+        function upperCase() {
+            const y = document.getElementById("fname");
+            y.value = y.value.toUpperCase();
+        }
+    </script>
+    <h3>onmouseover and onmouseout</h3>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#D94A38; width: 250px; height:20px;padding:40px;">
+        Mouse Over Me</div>
+
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Over Me"
+        }
+    </script>
+    <h3>onmousedown, onmouseup and onclick</h3>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#D94A38;width:170px;height:20px;padding:40px;">
+        Click Me</div>
+
+    <script>
+        function mDown(obj) {
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHTML = "Release Me";
+        }
+
+        function mUp(obj) {
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = "Thank You";
+        }
+    </script>
+    <h3>addEventListener</h3>
+    <button id="myBtn">Try it</button>
+
+    <p id="demo9"></p>
+
+    <script>
+        let p1 = 5;
+        let p2 = 7;
+        document.getElementById("myBtn").addEventListener("click", function () {
+            myFunction(p1, p2);
+        });
+
+        function myFunction(k, l) {
+            document.getElementById("demo9").innerHTML = k * l;
+        }
+    </script>
+    <h3>removeEventListener</h3>
+
+
+    <div id="myDIV1">
+        <p>This div element has an onmousemove event handler that displays a random number every time you move your
+            mouse inside this orange field.</p>
+        <p>Click the button to remove the div's event handler.</p>
+        <button onclick="removeHandler()" id="myBtn">Remove</button>
+    </div>
+
+    <p id="demo10"></p>
+
+    <script>
+        document.getElementById("myDIV1").addEventListener("mousemove", myFunction);
+
+        function myFunction() {
+            document.getElementById("demo10").innerHTML = Math.random();
+        }
+
+        function removeHandler() {
+            document.getElementById("myDIV1").removeEventListener("mousemove", myFunction);
+        }
+    </script>
+
+    <h3>DOM Navigation</h3>
+
+    <h1 id="id01">My First Page</h1>
+    <p id="id02"></p>
+
+    <script>
+        document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+    </script>
+
+
+    <h6 id="id1*">My First Page</h6>
+    <p id="id2*"></p>
+
+    <script>
+        document.getElementById("id2*").innerHTML = document.getElementById("id1*").nodeName;
+    </script>
+
+    <h3>DOM Node</h3>
+    <h3>Remove an HTML Element.</h3>
+
+    <div>
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <button onclick="myFunction5()">Remove Element</button>
+
+    <script>
+        function myFunction5() {
+            document.getElementById("p1").remove();
+        }
+    </script>
+    <h3>DOM collection</h3>
+    <h3>item property</h3>
+    <p>The item() method returns the element at the specified index.</p>
+    <button onclick="myFunction6()">Alert innerHTML of P</button>
+    <h3>length Property</h3>
+    <button onclick="myFunction7()">Count P elements</button>
+    <h3>namedItem property</h3>
+    <button onclick="myFunction8()">Alert innerHTML of P using ID</button>
+    <p id="myElement">The namedItem() method returns the element with the specified ID or name.</p>
+
+    <script>
+        function myFunction6() {
+            var d = document.getElementsByTagName("P");
+            alert(d.item(0).innerHTML);
+        }
+
+        function myFunction7() {
+            var l = document.getElementsByTagName("P").length;
+            alert(l);
+        }
+
+        function myFunction8() {
+            var h = document.getElementsByTagName("P").namedItem("myElement");
+            alert(h.innerHTML);
+        }
+    </script>
+
+    <h3>Node Collection</h3>
+    <p id="demo11"></p>
+
+    <script>
+        const myNodelist = document.querySelectorAll("p");
+
+        document.getElementById("demo11").innerHTML = "The innerHTML of the second paragraph is: " + myNodelist[1].innerHTML;
+
+    </script>
+</body>
+
+</html>
