@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>JSON</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h2>Creating an Object from a JSON String</h2>
+    <p id="demo"></p>
+    <script>
+        const txt = '{"name":"John", "age":30, "city":"New York"}'
+        const obj = JSON.parse(txt);
+        document.getElementById("demo").innerHTML = obj.name + ", " + obj.city;
+    </script>
+
+    <h2>Parsing a JSON Array.</h2>
+    <p>Data written as an JSON array will be parsed into a JavaScript array.</p>
+    <p id="demo1"></p>
+    <script>
+        const text = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+        const myArr = JSON.parse(text);
+        document.getElementById("demo1").innerHTML = myArr[0];
+    </script>
+
+    <h2>Convert a string into a date object.</h2>
+    <p id="demo2"></p>
+    <script>
+        const text1 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        const object = JSON.parse(text1);
+        object.birth = new Date(object.birth);
+        document.getElementById("demo2").innerHTML = object.name + ", " + object.birth;
+    </script>
+
+    <h2>Convert a string into a date, using the reviver function</h2>
+    <p id="demo3"></p>
+    <script>
+        const text2 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        const obj1 = JSON.parse(text2, function (key, value) {
+            if (key == "birth") {
+                return new Date(value);
+            } else {
+                return value;
+            }
+        });
+        document.getElementById("demo3").innerHTML = obj1.name + ", " + obj1.birth;
+    </script>
+
+    <h2>Convert a string into a function.</h2>
+    <p id="demo4"></p>
+    <script>
+        const text3 = '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+        const obj2 = JSON.parse(text3);
+        obj2.age = eval("(" + obj2.age + ")");
+        document.getElementById("demo4").innerHTML = obj2.name + ", " + obj2.age();
+    </script>
+
+    <h2>Stringify a JavaScript Object</h2>
+    <p id="demo5"></p>
+    <script>
+        const obj3 = { name: "John", age: 30, city: "New York" };
+        const myJSON = JSON.stringify(obj3);
+        document.getElementById("demo5").innerHTML = myJSON;
+    </script>
+
+    <h2>Stringify a JavaScript Array</h2>
+    <p id="demo6"></p>
+    <script>
+        const arr = ["John", "Peter", "Sally", "Jane"];
+        const myJSON1 = JSON.stringify(arr);
+        document.getElementById("demo6").innerHTML = myJSON1;
+    </script>
+
+    <h2>Storing data in local storage</h2>
+    <p id="demo7"></p>
+    <script>
+        // Storing data:
+        const myObj = { name: "John", age: 31, city: "New York" };
+        const myJSON2 = JSON.stringify(myObj);
+        localStorage.setItem("testJSON", myJSON2);
+
+        // Retrieving data:
+        let text4 = localStorage.getItem("testJSON");
+        let obj4 = JSON.parse(text4);
+        document.getElementById("demo7").innerHTML = obj4.name;
+    </script>
+
+    <h2>Stringify Dates</h2>
+    <p id="demo8"></p>
+    <script>
+        const obj5 = { name: "John", today: new Date(), city: "New York" };
+        const myJSON3 = JSON.stringify(obj5);
+        document.getElementById("demo8").innerHTML = myJSON3;
+    </script>
+
+    <h2>String Functions</h2>
+    <p id="demo9"></p>
+    <script>
+        const obj6 = { name: "John", age: function () { return 30; }, city: "New York" };
+        const myJSON4 = JSON.stringify(obj6);
+        document.getElementById("demo9").innerHTML = myJSON4;
+    </script>
+
+    <h2>Access a JavaScript Object</h2>
+    <p id="demo10"></p>
+    <script>
+        const myJSON5 = '{"name":"John", "age":30, "car":null}';
+        const myObj1 = JSON.parse(myJSON5);
+        document.getElementById("demo10").innerHTML = myObj1["name"];
+    </script>
+
+    <h2>Looping an Object</h2>
+    <p id="demo11"></p>
+    <script>
+        const myJSON6 = '{"name":"John", "age":30, "car":null}';
+        const myObj2 = JSON.parse(myJSON6);
+        let text5 = "";
+        for (const a in myObj2) {
+            text5 += a + ", ";
+        }
+        document.getElementById("demo11").innerHTML = text5;
+    </script>
+
+    <h2>Access Array Values</h2>
+    <p id="demo12"></p>
+    <script>
+        const myJSON7 = '{"name":"John", "age":30, "cars":["Ford", "BMW", "Fiat"]}';
+        const myObj3 = JSON.parse(myJSON7);
+        document.getElementById("demo12").innerHTML = myObj3.cars[0];
+    </script>
+
+    <h2>Looping an Array</h2>
+    <p id="demo13"></p>
+    <script>
+        const myJSON8 = '{"name":"John", "age":30, "cars":["Ford", "BMW", "Fiat"]}';
+        const myObj4 = JSON.parse(myJSON8);
+        let text6 = "";
+        for (let i = 0; i < myObj4.cars.length; i++) {
+            text6 += myObj4.cars[i] + ", ";
+        }
+        document.getElementById("demo13").innerHTML = text6;
+    </script>
+
+</body>
+
+</html>

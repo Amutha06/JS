@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>JS Conditions and Loops</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h2>JavaScript IF conditions</h2>
+    <p>Display "Good day!" if the hour is less than 18:00:</p>
+    <p id="demo">Good Evening!</p>
+
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "Good day!";
+        }
+    </script>
+
+    <h2>Javascript IF ELSE conditions</h2>
+    <p id="demo1"></p>
+
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.getElementById("demo1").innerHTML = greeting;
+    </script>
+
+    <h2>JavaScript IF...ELSE IF conditions</h2>
+    <p id="demo2"></p>
+
+    <script>
+        const time = new Date().getHours();
+        let greetings;
+        if (time < 10) {
+            greetings = "Good morning";
+        } else if (time < 20) {
+            greetings = "Good day";
+        } else {
+            greetings = "Good evening";
+        }
+        document.getElementById("demo2").innerHTML = greetings;
+    </script>
+
+    <h2>JavaScript SWITCH Condition</h2>
+    <p id="demo3"></p>
+
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+        document.getElementById("demo3").innerHTML = "Today is " + day;
+    </script>
+
+    <p id="demo4"></p>
+
+    <script>
+        let x = "0";
+
+        switch (x) {
+            case 0:
+                text = "Off";
+                break;
+            case 1:
+                text = "On";
+                break;
+            default:
+                text = "No value found";
+        }
+        document.getElementById("demo4").innerHTML = text;
+    </script>
+
+    <h2>JavaScript FOR loop</h2>
+    <p id="demo5"></p>
+
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let texts = "";
+        for (let i = 0; i < cars.length; i++) {
+            texts += cars[i] + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = texts;
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        let w = 7;
+        let star = "";
+        for (let u = 1; u <= w; u++) {
+            for (let v = 0; v < u; v++) {
+                star += "*";
+            }
+            star += "<br>";
+        }
+        document.getElementById("demo6").innerHTML = star;
+
+    </script>
+
+    <h2>JavaScript For In Loop</h2>
+    <p>The for in statement loops through the properties of an object:</p>
+    <p id="demo7"></p>
+
+    <script>
+        const person = { fname: "John", lname: "Doe", age: 25 };
+
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        }
+
+        document.getElementById("demo7").innerHTML = txt;
+    </script>
+
+    <h2>JavaScript Array.forEach()</h2>
+    <p>Calls a function once for each array element.</p>
+    <p id="demo8"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let txts = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo8").innerHTML = txts;
+        function myFunction(value, index, array) {
+            txts += value + "<br>";
+        }
+    </script>
+
+    <h2>JavaScript For Of Loop</h2>
+    <p>The for of statement loops through the values of an iterable object.</p>
+    <p id="demo9"></p>
+
+    <script>
+        let language = "JavaScript";
+        let text5 = "";
+        for (let x of language) {
+            text5 += x + "<br>";
+        }
+        document.getElementById("demo9").innerHTML = text5;
+    </script>
+
+    <h2>JavaScript While Loop</h2>
+    <p id="demo10"></p>
+    <script>
+        let text6 = "";
+        let i = 0;
+        while (i < 10) {
+            text6 += "<br>The number is " + i;
+            i++;
+        }
+        document.getElementById("demo10").innerHTML = text6;
+    </script>
+
+    <h2>JavaScript Do While Loop</h2>
+    <p id="demo11"></p>
+    <script>
+        let text7 = "";
+        let j = 0;
+        do {
+            text7 += "<br>The number is " + j;
+            j++;
+        }
+        while (j < 10);
+        document.getElementById("demo11").innerHTML = text7;
+    </script>
+
+
+</body>
+
+</html>

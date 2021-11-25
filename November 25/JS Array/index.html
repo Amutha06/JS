@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>JS Arrays</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+    <p id="demo"></p>
+    <script>
+        const cars = [
+            "Saab",
+            "Volvo",
+            "BMW"
+        ];
+        document.getElementById("demo").innerHTML = cars;
+    </script>
+
+    <p>You can also create an array, and then provide the elements:</p>
+    <p id="demo1"></p>
+    <script>
+        const fruit = [];
+        fruit[0] = "Apple";
+        fruit[1] = "Orange";
+        fruit[2] = "Banana";
+        document.getElementById("demo1").innerHTML = fruit;
+    </script>
+
+    <h2>Using the JavaScript Keyword new</h2>
+    <p id="demo2"></p>
+    <script>
+        const veg = new Array("Potato", "Tomato", "Peas");
+        document.getElementById("demo2").innerHTML = veg;
+    </script>
+
+    <h2>Accessing Array Elements</h2>
+    <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+    <p id="demo3"></p>
+    <script>
+        const trans = ["Bike", "Cycle", "Car"];
+        document.getElementById("demo3").innerHTML = trans[0];
+    </script>
+
+    <h2>Changing an Array Element</h2>
+    <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+    <p id="demo4"></p>
+    <script>
+        const birds = ["Penquin", "Myna", "Peacock"];
+        birds[0] = "Vulture";
+        document.getElementById("demo4").innerHTML = birds;
+    </script>
+
+    <h2>Access the Full Array</h2>
+    <p id="demo5"></p>
+    <script>
+        const flowers = ["Rose", "Jasmine", "Tulip"];
+        document.getElementById("demo5").innerHTML = flowers;
+    </script>
+
+    <h2>Array are Objects</h2>
+
+    <p>Arrays use numbers to access its elements.</p>
+    <p id="demo6"></p>
+    <script>
+        const person5 = ["John", "Doe", 46];
+        document.getElementById("demo6").innerHTML = person5[0];
+    </script>
+
+    <p>JavaScript uses names to access object properties.</p>
+    <p id="demo7"></p>
+    <script>
+        const person6 = { firstName: "John", lastName: "Doe", age: 46 };
+        document.getElementById("demo7").innerHTML = person6.firstName;
+    </script>
+
+    <h2>Length Property</h2>
+    <p>The length property returns the length of an array.</p>
+    <p id="demo8"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo8").innerHTML = fruits.length;
+    </script>
+
+    <h2>Accessing the First Array Element</h2>
+    <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+    <p id="demo9"></p>
+    <script>
+        const fruit1 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo9").innerHTML = fruit1[0];
+    </script>
+
+    <h2>Accessing the Last Array Element</h2>
+    <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+    <p id="demo10"></p>
+    <script>
+        var fruit2 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo10").innerHTML = fruit2[fruit2.length - 1];
+    </script>
+
+<h2>Looping Array Elements</h2>
+<p>The best way to loop through an array is using a standard for loop:</p>
+<p id="demo11"></p>
+<script>
+const animals = ["Tiger", "Lion", "Monkey", "Panda"];
+let aLen = animals.length;
+let text = "<ul>";
+for (let i = 0; i < aLen; i++) {
+  text += "<li>" + animals[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo11").innerHTML = text;
+</script>
+
+<p>Array.forEach() calls a function for each array element.</p>
+<p id="demo12"></p>
+<script>
+const bird = ["Myna", "Penquin", "Peacock", "Eagle"];
+let text1 = "<ul>";
+bird.forEach(myFunction);
+text1 += "</ul>";
+document.getElementById("demo12").innerHTML = text1;
+function myFunction(value) {
+  text1 += "<li>" + value + "</li>";
+} 
+</script>
+
+<h2>Adding array elements</h2>
+<p>The push method appends a new element to an array.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo13"></p>
+<script>
+const fruits1 = ["Banana", "Orange", "Apple"];
+document.getElementById("demo13").innerHTML = fruits1;
+function myFunction() {
+  fruits1.push("Lemon");
+  document.getElementById("demo13").innerHTML = fruits1;
+}
+</script>
+
+<p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+<p id="demo14"></p>
+<script>
+const fruits2 = ["Banana", "Orange", "Apple"];
+fruits2[6] = "Lemon";
+let fLen1 = fruits2.length;
+let text5 = "";
+for (i = 0; i < fLen1; i++) {
+  text5 += fruits2[i] + "<br>";
+}
+document.getElementById("demo14").innerHTML = text5;
+</script>
+
+<h2>How to Recognize an Array</h2>
+
+<p>The typeof operator, when used on an array, returns object:</p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p>The instanceof operator returns true when used on an array:</p>
+<p id="demo17"></p>
+<script>
+const domes = ["Cat", "Dog", "Rabbit", "Cow"];
+document.getElementById("demo15").innerHTML = typeof domes;
+document.getElementById("demo16").innerHTML = Array.isArray(domes);
+document.getElementById("demo17").innerHTML = domes instanceof Array;
+</script>
+
+<h2>JavaScript Array Methods</h2> 
+<h2>toString()</h2>
+<p>The toString() method returns an array as a comma separated string:</p>
+<p id="demo18"></p>
+
+<h2>join()</h2> 
+<p>The join() method joins array elements into a string.</p>
+<p>It this example we have used " * " as a separator between the elements:</p>
+<p id="demo19"></p>
+
+<h2>pop()</h2>
+<p>The pop() method removes the last element from an array.</p>
+<p id="demo20"></p>
+
+<p>The pop() method returns the value that was "popped out":</p>
+<p id="demo21"></p>
+<p id="demo22"></p>
+
+<h2>push()</h2>
+<p>The push() method appends a new element to an array:</p>
+<p id="demo23"></p>
+
+<h2>shift()</h2>
+<p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+<p id="demo24"></p>
+
+<h2>unshift()</h2>
+<p>The unshift() method adds new elements to the beginning of an array:</p>
+<p id="demo25"></p>
+
+<h2>length property</h2>
+<p>The length property provides an easy way to append new elements to an array without using the push() method:</p>
+<p id="demo26"></p>
+
+<h2>Deleting element</h2>
+<p>Deleting elements leaves undefined holes in an array:</p>
+<p id="demo27"></p>
+
+<h2>Array Sort</h2>
+<p>By combining sort() and reverse() you can sort an array in descending order:</p>
+<p id="demo28"></p>
+<p id="demo29"></p>
+
+<script>
+const shapes = ["Heart", "Circle", "Square", "Oval", "Star"];
+document.getElementById("demo18").innerHTML = shapes.toString();
+document.getElementById("demo19").innerHTML = shapes.join(" * ");
+shapes.pop();
+document.getElementById("demo20").innerHTML = shapes;
+document.getElementById("demo21").innerHTML = shapes.pop();
+document.getElementById("demo22").innerHTML = shapes;
+shapes.push("Triangle");
+document.getElementById("demo23").innerHTML = shapes;
+shapes.shift();
+document.getElementById("demo24").innerHTML = shapes;
+shapes.unshift("Rectangle");
+document.getElementById("demo25").innerHTML = shapes;
+shapes[shapes.length] = "Rhombus";
+document.getElementById("demo26").innerHTML = shapes;
+delete shapes[0];
+document.getElementById("demo27").innerHTML =
+"The first shape is: " + shapes[0];
+// First sort the array
+shapes.sort();
+document.getElementById("demo28").innerHTML = shapes;
+// Then reverse it:
+shapes.reverse();
+document.getElementById("demo29").innerHTML = shapes;
+</script>
+
+</body>
+
+</html>
