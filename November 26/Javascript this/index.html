@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>JavaScript this Functions</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h5>The JavaScript <i>this</i> Keyword</h5>
+    <p id="demo"></p>
+
+    <h5>In a browser window the Global object is [object Window]:</h5>
+    <p id="demo1"></p>
+
+    <h5>In strict mode, when used alone, this also refers to the Global object [object Window]:</h5>
+    <p id="demo2"></p>
+
+    <h5>this in a Function (Default)</h5>
+    <p id="demo3"></p>
+
+    <h5>this in a Function (Strict)</h5>
+    <p id="demo4"></p>
+
+    <h5>this in Event Handlers</h5>
+    <button onclick="this.style.display='none'">Click to Remove Me!</button>
+
+    <h5>Object Method Binding</h5>
+    <p id="demo5"></p>
+
+    <h5>Explicit Function Binding</h5>
+    <p id="demo6"></p>
+
+
+    <script src="js/myscript.js"></script>
+</body>
+</html>

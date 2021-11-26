@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>JQuery HTML</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h2>Get Content - text(), html(), and val()</h2>
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+
+    <br><br>
+
+    <p>Name: <input type="text1" id="test1" value="Mickey Mouse"></p>
+    <button id="btn3">Show Value</button>
+
+    <h2>Get Attributes - attr()</h2>
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+    <button id="btn4">Show href Value</button>
+
+    <h2>Set Content - text(), html(), and val()</h2>
+    <p id="test2">This is a paragraph.</p>
+    <p id="test3">This is another paragraph.</p>
+    <p>Input field: <input type="text4" id="test4" value="Mickey Mouse"></p>
+    <button id="btn5">Set Text</button>
+    <button id="btn6">Set HTML</button>
+    <button id="btn7">Set Value</button>
+
+    <h2>A Callback Function for text(), html(), and val()</h2>
+    <p id="test5">This is a <b>bold</b> paragraph.</p>
+    <p id="test6">This is another <b>bold</b> paragraph.</p>
+    <button id="btn8">Show Old/New Text</button>
+    <button id="btn9">Show Old/New HTML</button>
+
+    <h2>Set Attributes - attr()</h2>
+    <p><a href="https://www.w3schools.com" title="Language tutorial" id="w3s1">W3Schools.com</a></p>
+    <button id="btn10">Change href and title</button>
+    <p>Mouse over the link to see that the href attribute has changed and a title attribute is set.</p>
+
+    <h2>jQuery append() Method</h2>
+    <p id="p1">This is a paragraph.</p>
+    <ol id="ol1">
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+    <button id="btn11">Append text</button>
+    <button id="btn12">Append list items</button>
+
+    <h2>jQuery prepend() Method</h2>
+    <p id="p2">This is a paragraph.</p>
+    <ol id="ol2">
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+    <button id="btn13">Prepend text</button>
+    <button id="btn14">Prepend list item</button>
+
+    <h2>jQuery after() and before() Methods</h2>
+    <img src="/images/apple.jpg" alt="Apple" width="150" height="150"><br><br>
+    <button id="btn15">Insert before</button>
+    <button id="btn16">Insert after</button>
+
+    <h2>jQuery - Remove Elements</h2>
+    <div id="div1" style="height:150px;width:500px;border:1px solid black;background-color:yellow;">
+        <p>To remove elements and content, there are mainly two jQuery methods:</p>
+        <p>remove() - Removes the selected element (and its child elements)</p>
+        <p>empty() - Removes the child elements from the selected element</p>
+    </div>
+    <br>
+    <button id="btn17">Remove div element</button>
+
+    <h2>jQuery - Empty Elements</h2>
+    <div id="div2" style="height:150px;width:500px;border:1px solid black;background-color:yellow;">
+        <p>To remove elements and content, there are mainly two jQuery methods:</p>
+        <p>remove() - Removes the selected element (and its child elements)</p>
+        <p>empty() - Removes the child elements from the selected element</p>
+    </div>
+    <br>
+    <button id="btn18">Empty div element</button>
+
+    <h2>Filter the Elements to be Removed</h2>
+    <p>This is a paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+    <button id="btn19">Remove all p elements with class="test"</button>
+
+    <h2>jQuery addClass() Method</h2>
+    <div id="div3">This is some text.</div>
+    <div id="div4">This is some text.</div>
+    <br>
+    <button id="btn20">Add classes to first div element</button>
+
+    <h2>jQuery removeClass() Method</h2>
+    <h1 id="head1" class="blue">Heading 1</h1>
+    <h2 id="head2" class="blue">Heading 2</h2>
+    <p>This is another paragraph.</p>
+    <button id="btn21">Remove class from elements</button>
+
+    <h2>jQuery toggleClass() Method</h2>
+    <h1 id="head3" class="blue">Toggle</h1>
+    <h2 id="head4" class="blue">Toggle</h2>
+    <button id="btn22">Toggle class</button>
+
+    <h2>Return a CSS Property</h2>
+    <p class="pa1" style="background-color: #ff0000">Haiii</p>
+    <p class="pa1" style="background-color: #00ff00">Hello!!!!</p>
+    <p class="pa1" style="background-color: #0000ff">Welcome</p>
+    <button id="btn23">Return bgcolor of p</button>
+
+    <h2>Set a CSS Property</h2>
+    <p class="pa2" style="background-color: #ff0000">Haiii</p>
+    <p class="pa2" style="background-color: #00ff00">Hello!!!!</p>
+    <p class="pa2" style="background-color: #0000ff">Welcome</p>
+    <button id="btn24">Set bgcolor of p</button>
+
+    <h2>Set Multiple CSS Properties</h2>
+    <p class="pa3" style="background-color: #ff0000">Haiii</p>
+    <p class="pa3" style="background-color: #00ff00">Hello!!!!</p>
+    <p class="pa3" style="background-color: #0000ff">Welcome</p>
+    <button id="btn25">Set CSS of p</button>
+
+    <h2>jQuery width() and height() Methods</h2>
+    <div id="div5"></div>
+    <br>
+    <button id="btn26">Display dimensions of div</button>
+    <p>width() - returns the width of an element.</p>
+    <p>height() - returns the height of an element.</p>
+    <p>innerWidth() - returns the width of an element (includes padding).</p>
+    <p>innerHeight() - returns the height of an element (includes padding).</p>
+    <p>outerWidth() - returns the width of an element (includes padding and border).</p>
+    <p>outerHeight() - returns the height of an element (includes padding and border).</p>
+
+
+
+    <script src="js/myscript.js"></script>
+</body>
+
+</html>
