@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 10px 50px;
+}
+.form-group{
+    margin: 10px;
+}
+input{
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 15px 10px;
+}
+#btn{
+    width: 200px;
+    padding: 15px;
+    margin-left: 250px;
+    background-color: #fff;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 33px;
+    cursor: pointer;
+    transition: all .38s ease-in-out;
+}
+#btn:hover{
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+table tr,td{
+    border: 1px solid #eee;
+    padding: 10px;
+}
