@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Employee Details</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="init()">
+
+    <div class="container">
+        <header class="headerbar top">
+            <h1>Employee Details</h1>
+        </header>
+        <aside class="leftbar">
+            <form name="Empform">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter First name" id="firstname" required>
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter Last name" id="lastname" required>
+                <label>Employee ID</label>
+                <input type="number" placeholder="Enter Employee ID" id="empid" required>
+                <label>Designation</label>
+                <input type="text" placeholder="Enter Designation" id="designation" required><br><br>
+                <button class="btn btn-success" id="submit" onclick="onSave()">Save</button>
+                <button class="btn btn-warning" id="reset" onclick="onClear()">Clear</button>
+            </form>
+        </aside>
+        <aside class="rightbar">
+
+            <table id="emptable">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Employee ID</th>
+                        <th>Designation</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tablerows">
+
+                </tbody>
+            </table>
+        </aside>
+    </div>
+
+    <script src="js/myscript.js"></script>
+</body>
+
+</html>
