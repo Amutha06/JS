@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Shop Details</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <button class="btn btn-info" onclick="myFunction4()">Go Back</button><br><br>
+<div class="container">
+    <form name="addfood" onsubmit="onSave()">
+        <legend><i>Add Foods</i></legend>
+        <label>Product Code</label>
+        <input type="text" placeholder="Enter Product Code" id="productcode" required>
+        <label>Food Title</label>
+        <input type="text" placeholder="Enter Food Title" id="foodtitle" required>
+        <label>Type</label>
+        <input type="text" placeholder="Enter Food Type" id="type" required>
+        <label>Price</label>
+        <input type="number" placeholder="Food Price" id="price" required><br><br>
+        <button class="btn btn-success" id="submit" type="submit">Save</button>
+        <button class="btn btn-warning" id="reset" type="reset" onclick="onClear()">Clear</button>
+    </form>
+</div>
+
+    <script src="js/myscript.js"></script>
+</body>
+
+</html>
