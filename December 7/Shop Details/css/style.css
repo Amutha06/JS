@@ -1,0 +1,27 @@
+.sidebar{
+    background: blanchedalmond;
+    height: 670px;
+}
+
+table{
+    width: 50%;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 2px solid black;
+    padding: 5px;
+}
+
+label{
+    width: 500px;
+    display: block;
+}
+
+.container{
+    margin: 50px;
+}
+
+input{
+    width: 400px;
+}
