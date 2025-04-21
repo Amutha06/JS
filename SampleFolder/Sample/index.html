@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        background: black;
+        padding: 20px;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 20px;
+      }
+      a {
+        color: red;
+        text-decoration: underline;
+      }
+      button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      input {
+        width: 50%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+      img {
+        width: 50%;
+
+        height: 200px;
+        border-radius: 10px;
+
+        margin: 20px 0;
+      }
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: 2px solid red;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 12px;
+        text-align: center;
+      }
+      .note {
+        color: gray;
+      }
+      .box {
+        border: 2px dashed #007bff;
+        padding: 15px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="top">HTML Tags Demo</h1>
+      <p class="note">This page uses a variety of HTML elements with attributes.</p>
+
+      <h2>Anchor Tag with Attributes</h2>
+      <a href="https://developer.mozilla.org" target="_blank" title="Visit MDN Web Docs">
+        Visit MDN Web Docs
+      </a>
+
+      <h2>Button with Event Attribute</h2>
+      <button onclick="alert('Thanks for clicking!')" type="button">Click Me</button>
+
+      <h2>Input with Attributes</h2>
+      <input
+        type="text"
+        placeholder="Type your name"
+        name="username"
+        maxlength="20"
+        required
+        autocomplete="on" />
+
+      <h2>Image with Attributes</h2>
+      <img
+        src="https://static.toiimg.com/thumb/msid-96856085,width-1280,height-720,imgsize-28082,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+        alt="Image"
+        loading="lazy" />
+
+      <h2>Iframe with Attributes</h2>
+      <iframe src="https://www.wikipedia.org" title="Wikipedia"></iframe>
+
+      <h2>Table with Scope and Colspan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day 1</td>
+            <td colspan="2">Intro to Web Development</td>
+          </tr>
+          <tr>
+            <td>Day 2</td>
+            <td>HTML Elements</td>
+            <td>2 hrs</td>
+          </tr>
+          <tr>
+            <td>Day 3</td>
+            <td>CSS Basics</td>
+            <td>3 hrs</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>All Heading Levels</h2>
+      <div class="box">
+        <h1>Heading 1 - h1</h1>
+        <h2>Heading 2 - h2</h2>
+        <h3>Heading 3 - h3</h3>
+        <h4>Heading 4 - h4</h4>
+        <h5>Heading 5 - h5</h5>
+        <h6>Heading 6 - h6</h6>
+      </div>
+
+      <h2>Paragraph and Italic</h2>
+      <p>This is a paragraph using the <code>&lt;p&gt;</code> tag.</p>
+      <p>Here's something <i>italicized</i> to emphasize a point.</p>
+      <h2><a href="#top"> Back to Top</a></h2>
+    </div>
+  </body>
+</html>
